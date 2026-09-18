@@ -1,0 +1,9 @@
+# Local dev tooling
+.claude/
+node_modules/
+
+# Raw source files (organized copies live in assets/files and assets/img)
+/CV 2025 (2).pdf
+/Full_Portfolio_2025.pdf
+/Short_Porto_2026.pdf
+/_extract/
