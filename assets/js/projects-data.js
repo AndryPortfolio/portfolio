@@ -13,7 +13,7 @@ const PROJECTS = [
     description:
       "A chaotic rogue-like card strategy game where you deploy quirky workers and chain powerful synergies to rescue your company from financial ruin. The goal is to crush your mounting debt before it crushes you — fast turns and clever combos are key to surviving the corporate apocalypse.",
     images: ["1.jpg", "2.jpg"],
-    links: { itch: null, youtube: null, github: null, web: null }
+    links: { itch: "https://damzakk.itch.io/161-trstudio-financialfighter", youtube: null, github: null, web: null }
   },
   {
     slug: "super-duper-space-wizard",
@@ -26,7 +26,7 @@ const PROJECTS = [
     description:
       "A retro-style wizard battle game. The goal is to defeat aliens by typing spells quickly and accurately. The game also features a hidden anomaly that adds a mysterious twist to the gameplay.",
     images: ["1.jpg", "2.jpg"],
-    links: { itch: null, youtube: null, github: null, web: null }
+    links: { itch: "https://haiyaink.itch.io/superduperspacewizard", youtube: null, github: null, web: null }
   },
   {
     slug: "heroes-of-indonesia",
@@ -39,7 +39,7 @@ const PROJECTS = [
     description:
       "A turn-based card game where the target is to beat the last boss while building your deck by buying new cards. Doubles as an education game — the card collection tells the story of each character with detailed information.",
     images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
-    links: { itch: null, youtube: null, github: null, web: null }
+    links: { itch: "https://thalath-riah-studio.itch.io/heroes-of-indonesia", youtube: null, github: null, web: null }
   },
   {
     slug: "spirit-of-weapon",
