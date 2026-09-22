@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (portfolioMount && typeof PROJECTS !== "undefined") {
     initPortfolio(portfolioMount);
   }
+
+  const plainListMount = document.getElementById("plain-project-list");
+  if (plainListMount && typeof PROJECTS !== "undefined") {
+    renderPlainProjectList(plainListMount);
+  }
 });
 
 function initNav() {
@@ -109,6 +114,30 @@ function initPortfolio(mount) {
   }
 
   renderProjectGrid(mount, allProjects);
+}
+
+function renderPlainProjectList(mount) {
+  const allProjects = [...PROJECTS].sort((a, b) => b.year - a.year);
+  mount.innerHTML = allProjects
+    .map((p) => {
+      const linkEntries = Object.entries(p.links || {}).filter(([, v]) => v);
+      const links = linkEntries
+        .map(([kind, url]) => `<a class="plain-list-link" href="${url}" target="_blank" rel="noopener">${linkLabel(kind)} →</a>`)
+        .join(" &nbsp; ");
+      return `
+        <li class="plain-list-item">
+          <div class="plain-list-body">
+            <div class="plain-list-head">
+              <h3>${p.title}</h3>
+              <span class="plain-list-meta">${p.year} · ${p.role} · ${p.platform}</span>
+            </div>
+            <p class="plain-list-desc">${p.description}</p>
+            ${links ? `<div>${links}</div>` : ""}
+          </div>
+        </li>
+      `;
+    })
+    .join("");
 }
 
 /* ---------- Lightbox ---------- */

@@ -416,6 +416,45 @@ p { margin: 0 0 1em; color: var(--text-muted); }
 .footer-links a:hover { color: var(--accent); }
 .copyright { font-size: 0.82rem; color: var(--text-muted); }
 
+/* ---------- Plain project list ---------- */
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: proj;
+}
+.plain-list-item {
+  counter-increment: proj;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.plain-list-item:first-child { border-top: 1px solid var(--border); }
+.plain-list-item::before {
+  content: counter(proj, decimal-leading-zero);
+  font-family: var(--font-head);
+  color: var(--accent);
+  font-size: 0.95rem;
+  padding-top: 2px;
+}
+.plain-list-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.plain-list-head h3 { margin: 0; font-size: 1.05rem; }
+.plain-list-meta { font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-head); }
+.plain-list-desc { margin: 0; font-size: 0.9rem; }
+.plain-list-link { font-size: 0.85rem; color: var(--accent); }
+@media (max-width: 560px) {
+  .plain-list-item { grid-template-columns: 1fr; }
+  .plain-list-item::before { display: none; }
+}
+
 /* ---------- Misc ---------- */
 .badge-strip { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
 .badge {
